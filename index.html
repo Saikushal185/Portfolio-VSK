@@ -7,7 +7,6 @@
     <meta name="description"
         content="Computer Science Engineer proficient in Python, JavaScript, and SQL, with hands-on experience in AI/ML, computer vision, and full-stack web development. Passionate about building intelligent, real-time systems and scalable applications using modern technologies like TensorFlow, YOLO, and MERN stack." />
     <link rel="canonical" href="https://www.saikushal.online/">
-    <!--=============== FAVICON ===============-->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
 
@@ -17,21 +16,19 @@
     <meta name="theme-color" content="#a789d4">
 
 
-    <!--=============== BOXICONS ===============-->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
 
-    <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <title> Sai Kushal's Portfolio </title>
 </head>
 
 <body>
-    <!--=============== HEADER ===============-->
+    <div id="tsparticles"></div>
+
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">V.Sai Kushal</a>
@@ -77,15 +74,12 @@
                 </ul>
             </div>
 
-            <!--=============== theme change button ===============-->
             <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
 
         </nav>
     </header>
 
-    <!--=============== MAIN ===============-->
     <main class="main">
-        <!--=============== HOME ===============-->
         <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__data">
@@ -96,7 +90,7 @@
                     </h3>
 
                     <div class="home__button">
-                        <a download="" href="assets/pdf/Vittanala-Sai-Kushal-Resume.pdf" class="button button--ghost">
+                        <a download="" href="assets/pdf/Vittanala-Sai-Kushal-Resume.pdf" class="button">
                             Download Resume
                         </a>
                         <a href="#about" class="button">About</a>
@@ -115,11 +109,8 @@
                     <a href="https://github.com/Saikushal185" target="_blank" class="home__social-link">
                         <i class='bx bxl-github'></i>
                     </a>
-                    </a>
                     <a href="https://leetcode.com/u/saikushal18/" target="_blank" class="home__social-link">
-                        <i class='bx bx-code-alt'></i> <!-- You can replace this with a LeetCode icon if available -->
-                    </a>
-                    <!-- Optional: add other social links here -->
+                        <i class='bx bx-code-alt'></i> </a>
                 </div>
 
                 <a href="#about" class="home__scroll">
@@ -130,7 +121,6 @@
         </section>
 
 
-        <!--=============== ABOUT ===============-->
         <section class="about section" id="about">
             <span class="section__subtitle">My Intro</span>
             <h2 class="section__title">About Me</h2>
@@ -189,13 +179,11 @@
         </section>
 
 
-        <!--=============== Education ===============-->
         <section class="education section" id="education">
             <span class="section__subtitle">My Journey</span>
             <h2 class="section__title">Education</h2>
 
             <div class="education__timeline">
-                <!-- B.Tech -->
                 <div class="education__entry">
                     <div class="education__marker"></div>
                     <div class="education__info">
@@ -206,7 +194,6 @@
                     </div>
                 </div>
 
-                <!-- Intermediate -->
                 <div class="education__entry">
                     <div class="education__marker"></div>
                     <div class="education__info">
@@ -218,7 +205,6 @@
                     </div>
                 </div>
 
-                <!-- SSC -->
                 <div class="education__entry">
                     <div class="education__marker"></div>
                     <div class="education__info">
@@ -235,14 +221,12 @@
 
 
 
-        <!--=============== SKILLS ===============-->
         <section class="skills section" id="skills">
             <span class="section__subtitle">My Abilities</span>
             <h2 class="section__title">My Experience</h2>
 
             <div class="skills__container container grid">
 
-                <!-- Frontend Development -->
                 <div class="skills__content">
                     <h3 class="skills__title">Frontend Development</h3>
                     <div class="skills__box">
@@ -281,7 +265,6 @@
                     </div>
                 </div>
 
-                <!-- Backend Development -->
                 <div class="skills__content">
                     <h3 class="skills__title">Backend Development</h3>
                     <div class="skills__box">
@@ -311,7 +294,6 @@
                     </div>
                 </div>
 
-                <!-- AI/ML & Data Science -->
                 <div class="skills__content">
                     <h3 class="skills__title">AI/ML & Data Science</h3>
                     <div class="skills__box">
@@ -357,7 +339,6 @@
                     </div>
                 </div>
 
-                <!-- Programming Languages -->
                 <div class="skills__content">
                     <h3 class="skills__title">Programming Languages</h3>
                     <div class="skills__box">
@@ -387,7 +368,6 @@
                     </div>
                 </div>
 
-                <!-- DevOps & Tools -->
                 <div class="skills__content">
                     <h3 class="skills__title">DevOps & Tools</h3>
                     <div class="skills__box">
@@ -417,7 +397,6 @@
                     </div>
                 </div>
 
-                <!-- CS Fundamentals -->
                 <div class="skills__content">
                     <h3 class="skills__title">CS Fundamentals</h3>
                     <div class="skills__box">
@@ -451,14 +430,12 @@
         </section>
 
 
-        <!--=============== SERVICES ===============-->
         <section class="services section">
             <span class="section__subtitle">My Services</span>
             <h2 class="section__title">What I Offer</h2>
 
             <div class="services__container container grid">
 
-                <!-- Web Development -->
                 <div class="services__card">
                     <div class="serv">
                         <h3 class="services__title">Web <br> Development</h3>
@@ -500,7 +477,6 @@
                     </div>
                 </div>
 
-                <!-- Data Science & Machine Learning -->
                 <div class="services__card">
                     <h3 class="services__title">AI/ML & Data Science</h3>
                     <span class="services__button">
@@ -540,7 +516,6 @@
                     </div>
                 </div>
 
-                <!-- Programming -->
                 <div class="services__card">
                     <h3 class="services__title">Programming</h3>
                     <span class="services__button">
@@ -579,7 +554,6 @@
         </section>
 
 
-        <!--=============== WORK ===============-->
         <section class="work section" id="work">
             <span class="section__subtitle">My Portfolio</span>
             <h2 class="section__title">Recent Works</h2>
@@ -593,7 +567,6 @@
 
             <div class="work__container container grid">
 
-                <!-- Face Recognition System -->
                 <div class="work__card mix cv ds">
                     <h3 class="work__title">Face Recognition System</h3>
                     <a href="https://github.com/Saikushal185" class="work__button" target="_blank">
@@ -601,7 +574,6 @@
                     </a>
                 </div>
 
-                <!-- Real-Time Fight Detection -->
                 <div class="work__card mix cv ds">
                     <h3 class="work__title">Real-Time Fight Detection</h3>
                     <a href="https://github.com/Saikushal185" class="work__button" target="_blank">
@@ -609,7 +581,6 @@
                     </a>
                 </div>
 
-                <!-- Food Waste Management System -->
                 <div class="work__card mix web ds">
                     <h3 class="work__title">Food Waste Management System</h3>
                     <a href="https://github.com/Saikushal185" class="work__button" target="_blank">
@@ -617,7 +588,6 @@
                     </a>
                 </div>
 
-                <!-- Quiz Website -->
                 <div class="work__card mix web">
                     <h3 class="work__title">Quiz Website</h3>
                     <a href="https://github.com/Saikushal185" class="work__button" target="_blank">
@@ -629,18 +599,15 @@
         </section>
 
 
-        <section class="work section" id="work">
+        <section class="work section" id="certifications">
             <h2 class="section__title">Certifications</h2>
             <div class="work__container container grid">
 
-                <!-- MongoDB University: Intermediate DBA -->
                 <div class="work__card mix db mongo">
                     <img src="assets/img/mongo_cert.jpg" alt="MongoDB Intermediate DBA" class="work__img">
                     <h3 class="work__title">MongoDB Intermediate DBA</h3>
-                    <!-- Add link if available later -->
                 </div>
 
-                <!-- AWS Cloud Foundations -->
                 <div class="work__card mix cloud aws">
                     <img src="assets/img/aws_foundation.jpg" alt="AWS Cloud Foundations" class="work__img">
                     <h3 class="work__title">AWS Cloud Foundations</h3>
@@ -650,7 +617,6 @@
                     </a>
                 </div>
 
-                <!-- AWS Cloud Architecting -->
                 <div class="work__card mix cloud aws">
                     <img src="assets/img/aws_architecting.jpg" alt="AWS Cloud Architecting" class="work__img">
                     <h3 class="work__title">AWS Cloud Architecting</h3>
@@ -660,7 +626,6 @@
                     </a>
                 </div>
 
-                <!-- Microsoft Azure Data Fundamentals -->
                 <div class="work__card mix cloud azure">
                     <img src="assets/img/azure_data_fundamentals.jpg" alt="Azure Data Fundamentals" class="work__img">
                     <h3 class="work__title">Azure Data Fundamentals</h3>
@@ -670,28 +635,26 @@
                     </a>
                 </div>
 
-
-
-                <!-- AWS Cloud Practitioner (coming soon) -->
                 <div class="work__card mix cloud aws">
                     <img src="assets/img/aws_practitioner.jpg" alt="AWS Cloud Practitioner" class="work__img">
                     <h3 class="work__title">AWS Cloud Practitioner</h3>
-                    <!-- You'll upload certificate image later -->
+                    <a href="https://www.credly.com/badges/df2bb7bc-e174-42b3-b165-7961243609d1/public_url"
+                        class="work__button" target="_blank">
+                        Link <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
                 </div>
-
-                <!-- Oracle GenAI Certification -->
-                <div class="work__card mix ai oracle">
-                    <img src="assets/img/oracle_genai.jpg" alt="Oracle GenAI" class="work__img">
-                    <h3 class="work__title">Oracle GenAI Foundations</h3>
-                    <!-- Add link if available later -->
+                
+                <div class="work__card mix cloud oracle">
+                    <img src="assets/img/oracle_genai.jpg" alt="Oracle Cloud Infrastructure Foundations" class="work__img">
+                    <h3 class="work__title">Oracle Cloud Infrastructure Foundations</h3>
+                    <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=06CF7015C882785A659FEBEDE4FF4D61ABDA6264DBDD5665EFE44A41E45A3576"
+                        class="work__button" target="_blank">
+                        Link <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
                 </div>
-
-
-
             </div>
         </section>
 
-        <!--=============== CONTACT ===============-->
         <section class="contact section" id="contact">
             <span class="section__subtitle">Get in touch</span>
             <h3 class="section__title">Contact Me</h3>
@@ -750,7 +713,6 @@
             </div>
         </section>
 
-        <!--=============== FOOTER ===============-->
         <footer class="footer">
             <div class="footer__container container">
                 <h1 class="footer__title">Sai Kushal Vittanala</h1>
@@ -790,7 +752,6 @@
                             <i class='bx bxl-linkedin footer__social-icon'></i>
                         </a>
                     </li>
-                    <!-- Add your Instagram or LeetCode if desired -->
                 </ul>
 
                 <span class="footer__copy">
@@ -800,18 +761,14 @@
         </footer>
 
 
-        <!--=============== SCROLLREVEAL ===============-->
-
-        <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
         <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
-        <!--=============== SWIPER JS ===============-->
         <script src="assets/js/swiper-bundle.min.js"></script>
 
-        <!--=============== MIXITUP FILTER ===============-->
         <script src="assets/js/mixitup.min.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
-        <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
 </body>
 

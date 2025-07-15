@@ -8,12 +8,10 @@ function scrollHeader() {
 window.addEventListener("scroll", scrollHeader);
 
 /*=============== SERVICES MODAL ===============*/
-// Get the modal
 const modalViews = document.querySelectorAll(".services__modal"),
   modalBtns = document.querySelectorAll(".services__button"),
   modalClose = document.querySelectorAll(".services__modal-close");
 
-// When the user clicks on the button, open the modal
 let modal = function (modalClick) {
   modalViews[modalClick].classList.add("active-modal");
 };
@@ -33,7 +31,6 @@ modalClose.forEach((mc) => {
 });
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
-
 let mixer = mixitup(".work__container", {
   selectors: {
     target: ".work__card",
@@ -61,7 +58,6 @@ workLinks.forEach((wl) => {
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-
 const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
@@ -90,19 +86,15 @@ const themeButton = document.getElementById("theme-button");
 const lightTheme = "light-theme";
 const iconTheme = "bx-sun";
 
-// Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
 
-// We obtain the current theme that the interface has by validating the light-theme class
 const getCurrentTheme = () =>
   document.body.classList.contains(lightTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
   themeButton.classList.contains(iconTheme) ? "bx bx-moon" : "bx bx-sun";
 
-// We validate if the user previously chose a topic
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the light
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     lightTheme
   );
@@ -111,14 +103,13 @@ if (selectedTheme) {
   );
 }
 
-// Activate / deactivate the theme manually with the button
 themeButton.addEventListener("click", () => {
-  // Add or remove the light / icon theme
   document.body.classList.toggle(lightTheme);
   themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
+  
+  loadParticles(getCurrentTheme());
 });
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
@@ -130,82 +121,131 @@ const sr = ScrollReveal({
   reset: true,
 });
 
-sr.reveal(`.nav__menu`, {
-  delay: 100,
-  scale: 0.1,
-  origin: "bottom",
-  distance: "300px",
-});
-
+sr.reveal(`.nav__menu`, { delay: 100, scale: 0.1, origin: "bottom", distance: "300px"});
 sr.reveal(`.home__data`);
-sr.reveal(`.home__handle`, {
-  delay: 100,
-});
+sr.reveal(`.home__handle`, { delay: 100 });
+sr.reveal(`.home__social, .home__scroll`, { delay: 100, origin: "bottom" });
+sr.reveal(`.about__img`, { delay: 100, origin: "left", scale: 0.9, distance: "30px" });
+sr.reveal(`.about__data, .about__description, .about__button-contact`, { delay: 100, scale: 0.9, origin: "right", distance: "30px" });
+sr.reveal(`.skills__content`, { delay: 100, scale: 0.9, origin: "bottom", distance: "30px" });
+sr.reveal(`.services__title, services__button`, { delay: 100, scale: 0.9, origin: "top", distance: "30px" });
+sr.reveal(`.work__card`, { delay: 100, scale: 0.9, origin: "bottom", distance: "30px" });
+sr.reveal(`.testimonial__container`, { delay: 100, scale: 0.9, origin: "bottom", distance: "30px" });
+sr.reveal(`.contact__info, .contact__title-info`, { delay: 100, scale: 0.9, origin: "left", distance: "30px" });
+sr.reveal(`.contact__form, .contact__title-form`, { delay: 100, scale: 0.9, origin: "right", distance: "30px" });
+sr.reveal(`.footer, footer__container`, { delay: 100, scale: 0.9, origin: "bottom", distance: "30px" });
 
-sr.reveal(`.home__social, .home__scroll`, {
-  delay: 100,
-  origin: "bottom",
-});
 
-sr.reveal(`.about__img`, {
-  delay: 100,
-  origin: "left",
-  scale: 0.9,
-  distance: "30px",
-});
+/*=============== INTERACTIVE BACKGROUND WITH ANIMATIONS ===============*/
 
-sr.reveal(`.about__data, .about__description, .about__button-contact`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "right",
-  distance: "30px",
-});
+function loadParticles(theme) {
+  const particleColors = ['#007aff', '#00c4ff', '#7a67ee']; 
+  let linkColor;
 
-sr.reveal(`.skills__content`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "bottom",
-  distance: "30px",
-});
+  if (theme === 'light') {
+    linkColor = '#a0a0a0'; 
+  } else {
+    linkColor = '#ffffff'; 
+  }
 
-sr.reveal(`.services__title, services__button`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "top",
-  distance: "30px",
-});
+  tsParticles.load("tsparticles", {
+    fpsLimit: 60,
+    particles: {
+      number: {
+        value: 60,
+        density: {
+          enable: true,
+          value_area: 800
+        }
+      },
+      color: {
+        value: particleColors
+      },
+      shape: {
+        type: "circle"
+      },
+      opacity: {
+        value: 0.8,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 1,
+          opacity_min: 0.1,
+          sync: false
+        }
+      },
+      size: {
+        value: 3,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 2,
+          size_min: 0.1,
+          sync: false
+        }
+      },
+      links: {
+        enable: true,
+        distance: 150,
+        color: {
+          value: linkColor
+        },
+        opacity: 0.4,
+        width: 1,
+        triangles: {
+          enable: true,
+          color: {
+              value: "#1a2a45"
+          },
+          opacity: 0.05
+        }
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        attract: {
+          enable: false
+        }
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: {
+          enable: true,
+          // --- UPDATED: Connect mode added
+          mode: ["repulse", "connect"] 
+        },
+        onclick: {
+          enable: true,
+          mode: "push"
+        },
+        resize: true
+      },
+      modes: {
+        repulse: {
+          distance: 100
+        },
+        push: {
+          particles_nb: 4
+        },
+        // --- NEW: Configuration for the connect mode
+        connect: {
+          distance: 80,
+          links: {
+            opacity: 0.5
+          },
+          radius: 150
+        }
+      }
+    },
+    detectRetina: true
+  });
+}
 
-sr.reveal(`.work__card`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "bottom",
-  distance: "30px",
-});
-
-sr.reveal(`.testimonial__container`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "bottom",
-  distance: "30px",
-});
-
-sr.reveal(`.contact__info, .contact__title-info`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "left",
-  distance: "30px",
-});
-
-sr.reveal(`.contact__form, .contact__title-form`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "right",
-  distance: "30px",
-});
-
-sr.reveal(`.footer, footer__container`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "bottom",
-  distance: "30px",
-});
+// Initial load of the particles based on the current theme
+loadParticles(getCurrentTheme());
